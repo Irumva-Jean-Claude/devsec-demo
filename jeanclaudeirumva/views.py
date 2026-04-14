@@ -4,9 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
 from django.contrib import messages
 from .forms import RegistrationForm, LoginForm, PasswordChangeForm
-from .roles import ROLE_STUDENT, ROLE_INSTRUCTOR, ROLE_ADMIN, get_user_role, setup_roles
+from .roles import ROLE_STUDENT, get_user_role, setup_roles
 from .decorators import instructor_required, admin_required
-
 
 def register_view(request):
     if request.user.is_authenticated:
