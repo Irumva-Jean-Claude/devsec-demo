@@ -11,9 +11,7 @@ def avatar_upload_path(instance, filename):
 
 def document_upload_path(instance, filename):
     """Store documents in a user-specific folder."""
-    ext = os.path.splitext(filename)[1].lower()
     return f"documents/user_{instance.user.id}_{filename}"
-
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')

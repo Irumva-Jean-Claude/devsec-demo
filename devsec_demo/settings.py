@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 # ─── FILE UPLOAD SETTINGS ─────────────────────────────────────────────────────
-import os
+
 
 # Media files storage
 MEDIA_URL = '/media/'
