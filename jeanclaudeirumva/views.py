@@ -51,7 +51,7 @@ def login_view(request):
             messages.success(request, f"Welcome back, {user.username}!")
             return redirect('jeanclaudeirumva:dashboard')
         else:
-            attempts = register_failed_attempt(username)
+            register_failed_attempt(username)
             remaining = get_remaining_attempts(username)
             if remaining == 0:
                 messages.error(

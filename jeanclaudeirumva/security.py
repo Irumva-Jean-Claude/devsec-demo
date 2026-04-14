@@ -1,5 +1,5 @@
 from django.core.cache import cache
-from django.utils import timezone
+
 
 MAX_FAILED_ATTEMPTS = 5
 LOCKOUT_DURATION = 900  # 15 minutes in seconds
